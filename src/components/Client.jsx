@@ -3,15 +3,15 @@ import {SiToyota, SiHonda, SiBmw, SiMercedes, SiFord, SiChevrolet, SiNissan, SiA
 
 const Client = () => {
   return (
-    <div className='flex justify-evenly items-center mt-10 py-5 flex-wrap gap-10'>
-        <SiToyota size={30} color='#bebebe' />
-        <SiHonda size={30} color='#bebebe' />
-        <SiBmw size={30} color='#bebebe' />
-        <SiMercedes size={30} color='#bebebe' />
-        <SiFord size={30} color='#bebebe' />
-        <SiChevrolet size={30} color='#bebebe' />
-        <SiNissan size={30} color='#bebebe' />
-        <SiAudi size={30} color='#bebebe' />
+    <div className='grid grid-cols-4 mt-10 gap-5 justify-center w-full items-center lg:grid-cols-8 lg:mb-10'>
+        <SiToyota size={35} color='#bebebe' className=' mx-auto' />
+        <SiHonda size={35} color='#bebebe' className=' mx-auto'/>
+        <SiBmw size={35} color='#bebebe' className=' mx-auto'/>
+        <SiMercedes size={35} color='#bebebe' className=' mx-auto'/>
+        <SiFord size={35} color='#bebebe' className=' mx-auto'/>
+        <SiChevrolet size={35} color='#bebebe' className=' mx-auto'/>
+        <SiNissan size={35} color='#bebebe' className=' mx-auto'/>
+        <SiAudi size={35} color='#bebebe' className=' mx-auto'/>
     </div>
   )
 }

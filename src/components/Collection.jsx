@@ -17,32 +17,32 @@ function CollectionCars() {
 
   return (
     <div className='md:mt-60'>
-      <div className='flex justify-between mb-4 lg:justify-start lg:gap-3'>
+      <div className='flex justify-between mb-8 lg:justify-start lg:gap-3'>
         <div className='flex items-center gap-3'>
-            <p className='text-xl font-semibold'>Filter</p>
-            <AiFillFilter size={20} />
+          <p className='text-xl font-semibold text-blue-600'>Filter</p>
+          <AiFillFilter size={20} className='text-blue-600' />
         </div>
-        <select name="tab" id="tab" className='text-xl' value={selectedTab} onChange={filter}>
-            <option value="popular">Popular</option>
-            <option value="larger">Large Car</option>
-            <option value="small">Small Car</option>
-            <option value="exclusive">Exclusive</option>
+        <select name="tab" id="tab" className='text-xl bg-blue-600 py-1 px-3 rounded-md text-white outline-none' value={selectedTab} onChange={filter}>
+          <option value="popular">Sedan</option>
+          <option value="larger">Mobil Mewah</option>
+          <option value="small">Mobil Sport</option>
+          <option value="exclusive">Van</option>
         </select>
       </div>
 
-      <div data-aos="zoom-in" className="tab-content md:grid md:grid-cols-2 md:gap-3 lg:grid-cols-4">
+      <div className="tab-content md:grid md:grid-cols-2 md:gap-3 lg:grid-cols-4">
         {data.filter((d) => d.kategori == selectedTab).map(({nama, id, harga, gambar, kategori}) => (
-            <div key={id} className='p-3 bg-slate-100 mb-3 md:p-2 md:mb-0'>
-                <img src={gambar} alt={nama} />
-                <span className='text-slate-400'>{kategori}</span>
-                <p className='text-2xl font-bold text-red-500'>{harga}</p>
-                <h3 className='text-2xl font-semibold mb-4'>{nama}</h3>
-                <button className='bg-gray-700 p-2 font-bold text-white rounded-sm'>Booking now</button>
+          <div key={id} data-aos="fade-up" className=' bg-slate-100 mb-8 md:mb-0 rounded-xl overflow-hidden pb-5'>
+            <img src={gambar} alt={nama} className='mb-4 h-[200px] w-full object-cover'/>
+            <span className='text-slate-700 ms-5'>{kategori}</span>
+            <p className='text-3xl font-bold my-1 ms-5 text-blue-600'>${harga}</p>
+            <h3 className='text-xl text-slate-900 ms-5 font-semibold mb-4'>{nama}</h3>
+            <button className='py-2 px-4 font-bold text-white ms-5 rounded-md bg-blue-600'>Lihat Detail</button>
             </div>
         ))}
       </div>
-      <div className='text-center w-[50%] lg:w-[20%] mx-auto bg-purple-500 font-bold py-1 text-white text-lg flex justify-center items-center gap-1 my-5'>
-        <button>See all cars </button>
+      <div className='text-center w-[150px] lg:w-[20%] mx-auto bg-blue-600 font-bold py-2 text-white text-lg flex justify-center items-center gap-1 my-5 rounded-md cursor-pointer hover:bg-blue-700 transition-all duration-300 px-4'>
+        <button>Lihat Semua </button>
         <AiOutlineArrowRight />
       </div>
     </div>

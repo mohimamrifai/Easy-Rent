@@ -13,15 +13,15 @@ function App() {
   return (
     <>
       <Navbar />
-    <div className="px-[7%] overflow-hidden">
-      <Hero />
-      <Client />
-      <About />
-      <Service />
-      <Collection />
-      <Contact />
-    </div>
-    <Footer />
+      <div className="px-[7%] overflow-hidden">
+        <Hero />
+        <Client />
+        <About />
+        <Service />
+        <Collection />
+        <Contact />
+      </div>
+      <Footer />
     </>
   )
 }
