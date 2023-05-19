@@ -1,1 +1,1 @@
-<h1 algin="center">✨ Ease Rent ✨</h1>
+<h1 align="center">✨ Ease Rent ✨</h1>
