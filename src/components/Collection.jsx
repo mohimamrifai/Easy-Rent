@@ -32,12 +32,12 @@ function CollectionCars() {
 
       <div className="tab-content md:grid md:grid-cols-2 md:gap-3 lg:grid-cols-4">
         {data.filter((d) => d.kategori == selectedTab).map(({nama, id, harga, gambar, kategori}) => (
-          <div key={id} data-aos="fade-up" className=' bg-slate-100 mb-8 md:mb-0 rounded-xl overflow-hidden pb-5'>
+          <div key={id} className=' bg-slate-100 mb-8 md:mb-0 rounded-xl overflow-hidden pb-5'>
             <img src={gambar} alt={nama} className='mb-4 h-[200px] w-full object-cover'/>
             <span className='text-slate-700 ms-5'>{kategori}</span>
             <p className='text-3xl font-bold my-1 ms-5 text-blue-600'>${harga}</p>
             <h3 className='text-xl text-slate-900 ms-5 font-semibold mb-4'>{nama}</h3>
-            <button className='py-2 px-4 font-bold text-white ms-5 rounded-md bg-blue-600'>Lihat Detail</button>
+            <button className='py-2 px-4 font-bold text-white ms-5 rounded-md bg-blue-600 hover:bg-blue-900 duration-300 transition-all'>Lihat Detail</button>
             </div>
         ))}
       </div>
