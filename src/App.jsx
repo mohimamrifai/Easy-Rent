@@ -1,29 +1,25 @@
-import About from "./components/About"
-import Client from "./components/Client"
-import Collection from "./components/Collection"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import Navbar from "./components/Navbar"
-import Service from "./components/Service"
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Marquee from './components/Marquee'
+import About from './components/About'
+import Collection from './components/Collection'
+import Service from './components/Service'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
-
-function App() {
-
+export default function App() {
   return (
-    <>
+    <div className="grain min-h-[100dvh] bg-ink-950 text-white antialiased">
       <Navbar />
-      <div className="px-[7%] overflow-hidden">
+      <main>
         <Hero />
-        <Client />
+        <Marquee />
         <About />
-        <Service />
         <Collection />
+        <Service />
         <Contact />
-      </div>
+      </main>
       <Footer />
-    </>
+    </div>
   )
 }
-
-export default App
